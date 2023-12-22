@@ -1,0 +1,11 @@
+services:
+  - name: client
+    buildCommand: cd client && yarn
+    startCommand: cd client && yarn dev
+    root: client
+
+  - name: api
+    buildCommand: cd api && yarn
+    startCommand: cd api && node index.js
+    root: api
+    envVars:
